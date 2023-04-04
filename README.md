@@ -1,4 +1,4 @@
-# D&D Compendium
+# D&D Spellbook
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -8,15 +8,15 @@
 
 ## Overview
 ### Description
-Provides documentation for content relating to the tabletop roleplaying game, D&D.
+Provides a spellbook manager for Dungoens and Dragons players. These spellbooks will allow users to keep track of specific spells that they use and gain quick access to.
 
 ### App Evaluation
-- **Category:** Entertainment / Informational
+- **Category:** Entertainment / Management
 - **Mobile:** Designed mainly for mobile use but could also be translated well into a website format.
-- **Story:** Give players access to D&D related content and provide tools for running / playing a game.
-- **Market:** Anyone looking to get help or remember certain information regarding to Dungeons and Dragons.
-- **Habit:** The user may use this app very often to refer to the specifics of D&D content.
-- **Scope:** First we want to create a searchable index of most D&D related content (i.e spells, classes, races, etc...). This can evolve into creating several tools to help players manage their games and character sheets.
+- **Story:** Users can manage their characters spells through the app.
+- **Market:** Anyone looking to be able to manage a list of spells for their characters.
+- **Habit:** The user may use this app quite often during gameplay sessions to refer to their usable spells.
+- **Scope:** First we want to creating user accounts and spellbook management per account. This may evolve into spellbook sharing or other management tools for D&D.
 
 ## Product Spec
 
@@ -24,49 +24,55 @@ Provides documentation for content relating to the tabletop roleplaying game, D&
 
 **Required Must-have Stories**
 
-* Users should be able to access different categories with various information
-* Users should be able to make search requests for information
-* Access to the basic rules of D&D
+* Users are able to sign-up/login to access the app
+* Users can add or remove spells from their spellbook
+* Users should be able to view the details of a spell.
 
 **Optional Nice-to-have Stories**
 
-* Users can bookmark certain information that is saved across user accounts
-* Users can create and manage characters within the app
-* Users can roll virtual dice within the app
-* 
+* Users can share spellbooks in the form of a link, pdf, or other sharable medium
+* Users should be able to create and save more than one spellbook
+* Users can also view spells from homebrew (non-official) sources
 
 ### 2. Screen Archetypes
 
-* Main Screen
-   * The user is presented with a list of catagories
-   * Choosing a catagory will take the user to the Sub-Category Screen for the chosen category
-* Sub-Categories Screen
-   * The user will be presented with a list of sub-categories in a table view.
-   * There will be a search bar also allowing the user search sub-categories
-* Detailed Information Screen
-   * All individual specific informational screens will follow the same general format
-   * Will display specific information for the specified sub-category
+* Login
+* Register
+    * Sign up or sign into their accounts
+* Spell Books Screen
+   * The user can view a list of spell books under their account
+   * The user can select a spell book to view and edit
+* Spells Screen
+   * Displays specific information for spells
+   * User can search for specific spells
+* Specific Spell Book Screen
+   * User can view spells within a spellbook
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* Spells
-* Equipment
-* Races
-* Classes
-* Feats
-* Backgrounds
+* Home Screen
+* Spell Books
+* Spells Screen
 
 **Flow Navigation** (Screen to Screen)
 
+* Login Screen
+   * => Register Screen
+   * => Main Screen
 * Main Screen
-   * => Sub-Category Screen
-* Sub-Category Screen
-   * => Detailed Information Screen
-   * => Main Screen (Using back button)
-* Detailed Information Screen
-   * => Sub-Category Screen (Using back button)
+   * => Spell books
+   * => Spells
+* Spell Books Screen
+   * => Main Screen
+   * => Spell Books Specific Screen
+   * => (back button)
+* Spell Book Specific Screen
+   * => Spells screen
+   * => (back button)
+* Spells Screen
+   * => (back button)
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
