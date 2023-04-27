@@ -75,8 +75,7 @@ Provides a spellbook manager for Dungoens and Dragons players. These spellbooks 
    * => (back button)
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="IOS Wireframe.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
