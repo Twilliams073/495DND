@@ -2,18 +2,21 @@
 //  AppDelegate.swift
 //  DNDSpellbook
 //
-//  Created by Loaf on 4/25/23.
+//  Created by Ryan Gutierrez on 4/25/23.
 //
 
 import UIKit
+import ParseSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        ParseSwift.initialize(applicationId: "h3SioqsXKHMBhx0DUOPFGFDlCwRn8XEzg4te49YV",
+                              clientKey: "Te9I5Fk2RUJBhPBQswGyNRT00xQ9bR8o3JRZ2mJD",
+                              serverURL: URL(string: "https://parseapi.back4app.com")!)
+        
         return true
     }
 

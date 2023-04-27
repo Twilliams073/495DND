@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  DNDSpellbook
 //
-//  Created by Loaf on 4/25/23.
+//  Created by Ryan Gutierrez on 4/25/23.
 //
 
 import UIKit
@@ -11,12 +11,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+    
+        NotificationCenter.default.addObserver(forName: Notification.Name("login"), object: nil, queue: OperationQueue.main) { [weak self] _ in
+            self?.login()
+        }
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name("logout"), object: nil, queue: OperationQueue.main) { [weak self] _ in
+            self?.logout()
+        }
+        
+        if User.current != nil {
+            login()
+        }
+    }
+    
+    private func logout() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationController")
+    }
+
+    private func login() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "SpellNavigationController")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -9,23 +9,42 @@
 /* Begin PBXBuildFile section */
 		48AB3FC629F8A03300049CDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FC529F8A03300049CDA /* AppDelegate.swift */; };
 		48AB3FC829F8A03300049CDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FC729F8A03300049CDA /* SceneDelegate.swift */; };
-		48AB3FCA29F8A03300049CDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FC929F8A03300049CDA /* ViewController.swift */; };
 		48AB3FCD29F8A03300049CDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48AB3FCB29F8A03300049CDA /* Main.storyboard */; };
 		48AB3FCF29F8A03400049CDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48AB3FCE29F8A03400049CDA /* Assets.xcassets */; };
 		48AB3FD229F8A03400049CDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48AB3FD029F8A03400049CDA /* LaunchScreen.storyboard */; };
 		48AB3FDA29F8A03A00049CDA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 48AB3FD929F8A03A00049CDA /* README.md */; };
+		48AB3FDD29F8A54200049CDA /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 48AB3FDC29F8A54200049CDA /* ParseSwift */; };
+		48AB3FE529F8A6C300049CDA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FE429F8A6C300049CDA /* User.swift */; };
+		48AB3FE729F8A6D900049CDA /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FE629F8A6D900049CDA /* Spell.swift */; };
+		48AB3FE929F8A6E400049CDA /* Spellbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FE829F8A6E400049CDA /* Spellbook.swift */; };
+		48AB3FEF29F8A8F300049CDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FEE29F8A8F300049CDA /* LoginViewController.swift */; };
+		48AB3FF129F8A91300049CDA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FF029F8A91300049CDA /* SignUpViewController.swift */; };
+		48AB3FF729FA00C300049CDA /* SpellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FF629FA00C300049CDA /* SpellCell.swift */; };
+		48AB3FF929FA014E00049CDA /* SpellListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FF829FA014E00049CDA /* SpellListViewController.swift */; };
+		48AB3FFB29FA036B00049CDA /* SpellbookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FFA29FA036B00049CDA /* SpellbookListViewController.swift */; };
+		48AB3FFD29FA03EE00049CDA /* SpellbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FFC29FA03EE00049CDA /* SpellbookViewController.swift */; };
+		48AB3FFF29FA03FF00049CDA /* SpellbookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FFE29FA03FF00049CDA /* SpellbookCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48AB3FC229F8A03300049CDA /* DNDSpellbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNDSpellbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48AB3FC529F8A03300049CDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48AB3FC729F8A03300049CDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		48AB3FC929F8A03300049CDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		48AB3FCC29F8A03300049CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48AB3FCE29F8A03400049CDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48AB3FD129F8A03400049CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48AB3FD329F8A03400049CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48AB3FD929F8A03A00049CDA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		48AB3FE429F8A6C300049CDA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		48AB3FE629F8A6D900049CDA /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
+		48AB3FE829F8A6E400049CDA /* Spellbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spellbook.swift; sourceTree = "<group>"; };
+		48AB3FEE29F8A8F300049CDA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		48AB3FF029F8A91300049CDA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		48AB3FF629FA00C300049CDA /* SpellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCell.swift; sourceTree = "<group>"; };
+		48AB3FF829FA014E00049CDA /* SpellListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListViewController.swift; sourceTree = "<group>"; };
+		48AB3FFA29FA036B00049CDA /* SpellbookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellbookListViewController.swift; sourceTree = "<group>"; };
+		48AB3FFC29FA03EE00049CDA /* SpellbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellbookViewController.swift; sourceTree = "<group>"; };
+		48AB3FFE29FA03FF00049CDA /* SpellbookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellbookCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48AB3FDD29F8A54200049CDA /* ParseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,15 +79,56 @@
 		48AB3FC429F8A03300049CDA /* DNDSpellbook */ = {
 			isa = PBXGroup;
 			children = (
+				48AB3FF329FA004F00049CDA /* Spellbooks */,
+				48AB3FF229FA004500049CDA /* SpellList */,
+				48AB3FE329F8A69F00049CDA /* Models */,
 				48AB3FC529F8A03300049CDA /* AppDelegate.swift */,
+				48AB3FDE29F8A66F00049CDA /* Login */,
 				48AB3FC729F8A03300049CDA /* SceneDelegate.swift */,
-				48AB3FC929F8A03300049CDA /* ViewController.swift */,
 				48AB3FCB29F8A03300049CDA /* Main.storyboard */,
 				48AB3FCE29F8A03400049CDA /* Assets.xcassets */,
 				48AB3FD029F8A03400049CDA /* LaunchScreen.storyboard */,
 				48AB3FD329F8A03400049CDA /* Info.plist */,
 			);
 			path = DNDSpellbook;
+			sourceTree = "<group>";
+		};
+		48AB3FDE29F8A66F00049CDA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				48AB3FEE29F8A8F300049CDA /* LoginViewController.swift */,
+				48AB3FF029F8A91300049CDA /* SignUpViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		48AB3FE329F8A69F00049CDA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				48AB3FE429F8A6C300049CDA /* User.swift */,
+				48AB3FE629F8A6D900049CDA /* Spell.swift */,
+				48AB3FE829F8A6E400049CDA /* Spellbook.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		48AB3FF229FA004500049CDA /* SpellList */ = {
+			isa = PBXGroup;
+			children = (
+				48AB3FF629FA00C300049CDA /* SpellCell.swift */,
+				48AB3FF829FA014E00049CDA /* SpellListViewController.swift */,
+			);
+			path = SpellList;
+			sourceTree = "<group>";
+		};
+		48AB3FF329FA004F00049CDA /* Spellbooks */ = {
+			isa = PBXGroup;
+			children = (
+				48AB3FFA29FA036B00049CDA /* SpellbookListViewController.swift */,
+				48AB3FFC29FA03EE00049CDA /* SpellbookViewController.swift */,
+				48AB3FFE29FA03FF00049CDA /* SpellbookCell.swift */,
+			);
+			path = Spellbooks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +147,9 @@
 			dependencies = (
 			);
 			name = DNDSpellbook;
+			packageProductDependencies = (
+				48AB3FDC29F8A54200049CDA /* ParseSwift */,
+			);
 			productName = DNDSpellbook;
 			productReference = 48AB3FC229F8A03300049CDA /* DNDSpellbook.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +178,9 @@
 				Base,
 			);
 			mainGroup = 48AB3FB929F8A03300049CDA;
+			packageReferences = (
+				48AB3FDB29F8A54200049CDA /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+			);
 			productRefGroup = 48AB3FC329F8A03300049CDA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,8 +209,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48AB3FCA29F8A03300049CDA /* ViewController.swift in Sources */,
+				48AB3FEF29F8A8F300049CDA /* LoginViewController.swift in Sources */,
+				48AB3FF929FA014E00049CDA /* SpellListViewController.swift in Sources */,
+				48AB3FFB29FA036B00049CDA /* SpellbookListViewController.swift in Sources */,
+				48AB3FF129F8A91300049CDA /* SignUpViewController.swift in Sources */,
+				48AB3FE729F8A6D900049CDA /* Spell.swift in Sources */,
+				48AB3FFF29FA03FF00049CDA /* SpellbookCell.swift in Sources */,
+				48AB3FFD29FA03EE00049CDA /* SpellbookViewController.swift in Sources */,
+				48AB3FE529F8A6C300049CDA /* User.swift in Sources */,
 				48AB3FC629F8A03300049CDA /* AppDelegate.swift in Sources */,
+				48AB3FF729FA00C300049CDA /* SpellCell.swift in Sources */,
+				48AB3FE929F8A6E400049CDA /* Spellbook.swift in Sources */,
 				48AB3FC829F8A03300049CDA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +436,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		48AB3FDB29F8A54200049CDA /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		48AB3FDC29F8A54200049CDA /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48AB3FDB29F8A54200049CDA /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48AB3FBA29F8A03300049CDA /* Project object */;
 }
