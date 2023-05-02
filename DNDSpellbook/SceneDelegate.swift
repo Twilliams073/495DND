@@ -37,7 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private func login() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "SpellNavigationController")
+        self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

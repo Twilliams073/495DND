@@ -227,13 +227,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLv-1Q-Mib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="667"/>
+            <point key="canvasLocation" x="1747" y="667"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Spells-->
         <scene sceneID="aNX-tR-guy">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smz-hU-nnK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController storyboardIdentifier="SpellNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="XAg-1l-Fig" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XAg-1l-Fig" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Spells" image="list.bullet" catalog="system" id="2pK-ki-xDt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nXo-wl-GXa">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -245,10 +246,65 @@
                     </connections>
                 </navigationController>
             </objects>
+            <point key="canvasLocation" x="990" y="667"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Qhd-a3-spH">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="bTD-cL-ERS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QAb-eD-Scc">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XAg-1l-Fig" kind="relationship" relationship="viewControllers" id="khK-Xk-GmI"/>
+                        <segue destination="APU-pk-hMz" kind="relationship" relationship="viewControllers" id="GWd-DE-UgR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybZ-WS-oHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="254" y="667"/>
+        </scene>
+        <!--Spellbooks-->
+        <scene sceneID="q1T-Ar-2bG">
+            <objects>
+                <viewController id="zor-6N-L7t" customClass="SpellbookListViewController" customModule="DNDSpellbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uJm-kV-kqL" customClass="SpellbookView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2xd-vU-VuH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Spellbooks" id="XLl-Wr-Wpy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDB-zE-7Q0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179" y="1385"/>
+        </scene>
+        <!--Spellbooks-->
+        <scene sceneID="89t-fG-ccC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="APU-pk-hMz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Spellbooks" image="book" catalog="system" id="JjX-v3-FQN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ky7-T3-Wlx">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zor-6N-L7t" kind="relationship" relationship="rootViewController" id="DKV-Ed-2sO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OEY-HF-Zbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="254" y="1385"/>
         </scene>
     </scenes>
     <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
