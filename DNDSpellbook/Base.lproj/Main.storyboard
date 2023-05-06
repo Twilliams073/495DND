@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U8B-Me-bPa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U8B-Me-bPa">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -207,32 +208,145 @@
             </objects>
             <point key="canvasLocation" x="255" y="-2"/>
         </scene>
-        <!--Spells-->
+        <!--Classes-->
         <scene sceneID="wSu-MW-tuQ">
             <objects>
                 <viewController id="mBd-b5-Qfn" customClass="SpellListViewController" customModule="DNDSpellbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s52-3X-104">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bpd-ob-isT">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="classCell" rowHeight="99" id="vWx-U8-MtL" customClass="ClassCell" customModule="DNDSpellbook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="99"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vWx-U8-MtL" id="tVH-td-kfP">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Qno-Bq-oSw">
+                                                    <rect key="frame" x="36" y="27" width="321" height="45"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cWb-OD-aqc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="75" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="75" id="7jM-rl-nwq"/>
+                                                                <constraint firstAttribute="height" constant="75" id="x4t-jk-kpD"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mq-Pm-c3p">
+                                                            <rect key="frame" x="91" y="5.6666666666666643" width="230" height="33.666666666666664"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qno-Bq-oSw" firstAttribute="top" secondItem="tVH-td-kfP" secondAttribute="topMargin" constant="16" id="3Ex-jd-yRS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Qno-Bq-oSw" secondAttribute="trailing" constant="16" id="7Fj-cE-CAS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Qno-Bq-oSw" secondAttribute="bottom" constant="16" id="kD1-sH-3da"/>
+                                                <constraint firstItem="Qno-Bq-oSw" firstAttribute="leading" secondItem="tVH-td-kfP" secondAttribute="leadingMargin" constant="16" id="sJa-aZ-Hun"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconImageView" destination="cWb-OD-aqc" id="CJX-FM-OU3"/>
+                                            <outlet property="label" destination="7mq-Pm-c3p" id="SQf-GL-Zwh"/>
+                                            <segue destination="7eg-y9-7YB" kind="show" id="JtH-gv-CLF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="DrS-g0-doI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bpd-ob-isT" firstAttribute="leading" secondItem="DrS-g0-doI" secondAttribute="leading" id="BJI-5P-wVu"/>
+                            <constraint firstItem="DrS-g0-doI" firstAttribute="trailing" secondItem="Bpd-ob-isT" secondAttribute="trailing" id="Zml-8Z-qjv"/>
+                            <constraint firstItem="DrS-g0-doI" firstAttribute="bottom" secondItem="Bpd-ob-isT" secondAttribute="bottom" id="jM9-em-2zG"/>
+                            <constraint firstItem="Bpd-ob-isT" firstAttribute="top" secondItem="DrS-g0-doI" secondAttribute="top" id="yke-24-zJG"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Spells" id="8rl-vQ-nM0">
+                    <navigationItem key="navigationItem" title="Classes" id="8rl-vQ-nM0">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="YM4-BT-xH5" userLabel="Logout">
                             <connections>
                                 <action selector="didTapLogout:" destination="mBd-b5-Qfn" id="5TI-1i-0ob"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="classTableView" destination="Bpd-ob-isT" id="TQY-uA-it5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLv-1Q-Mib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1747" y="667"/>
+            <point key="canvasLocation" x="1745.8015267175572" y="666.90140845070425"/>
+        </scene>
+        <!--Class Spell View Controller-->
+        <scene sceneID="HoE-I1-s2D">
+            <objects>
+                <viewController id="7eg-y9-7YB" customClass="ClassSpellViewController" customModule="DNDSpellbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xOl-VC-cGM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VOb-jX-iXp">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpellCell" rowHeight="97" id="EWA-kf-yKv" customClass="SpellCell" customModule="DNDSpellbook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EWA-kf-yKv" id="lw7-ji-ycX">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spell Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83b-RR-TEJ">
+                                                    <rect key="frame" x="36" y="27" width="321" height="43"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="27"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="83b-RR-TEJ" firstAttribute="top" secondItem="lw7-ji-ycX" secondAttribute="topMargin" constant="16" id="3AX-Y2-co1"/>
+                                                <constraint firstItem="83b-RR-TEJ" firstAttribute="leading" secondItem="lw7-ji-ycX" secondAttribute="leadingMargin" constant="16" id="3uI-bF-Cev"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="83b-RR-TEJ" secondAttribute="bottom" constant="16" id="l6Y-ix-NDs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="83b-RR-TEJ" secondAttribute="trailing" constant="16" id="lON-I5-6Og"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="spellLabel" destination="83b-RR-TEJ" id="eVs-Nf-Kuu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uNL-4N-r2M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VOb-jX-iXp" firstAttribute="leading" secondItem="uNL-4N-r2M" secondAttribute="leading" id="PaG-NS-M86"/>
+                            <constraint firstItem="uNL-4N-r2M" firstAttribute="bottom" secondItem="VOb-jX-iXp" secondAttribute="bottom" id="Rsl-cs-bAm"/>
+                            <constraint firstItem="VOb-jX-iXp" firstAttribute="top" secondItem="uNL-4N-r2M" secondAttribute="top" id="TBc-Eo-cFN"/>
+                            <constraint firstItem="uNL-4N-r2M" firstAttribute="trailing" secondItem="VOb-jX-iXp" secondAttribute="trailing" id="vfx-NQ-Mkn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lHU-3O-rHG"/>
+                    <connections>
+                        <outlet property="tableView" destination="VOb-jX-iXp" id="32J-uP-rDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFq-Ox-1Ky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2507.6335877862593" y="666.90140845070425"/>
         </scene>
         <!--Spells-->
         <scene sceneID="aNX-tR-guy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="smz-hU-nnK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XAg-1l-Fig" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Spells" image="list.bullet" catalog="system" id="2pK-ki-xDt"/>
                     <toolbarItems/>
@@ -245,6 +359,7 @@
                         <segue destination="mBd-b5-Qfn" kind="relationship" relationship="rootViewController" id="RMO-ZE-VXT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smz-hU-nnK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="990" y="667"/>
         </scene>
@@ -254,6 +369,7 @@
                 <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="bTD-cL-ERS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QAb-eD-Scc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
