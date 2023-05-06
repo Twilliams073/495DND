@@ -22,7 +22,9 @@ struct User: ParseUser {
     var emailVerified: Bool?
     var password: String?
     var authData: [String: [String: String]?]?
-
+    
+    // Custom User properties
+    var currentSpellbookName: String?
 }
 
 extension User {

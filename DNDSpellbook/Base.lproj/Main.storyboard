@@ -66,7 +66,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jqn-lc-iGq">
-                                <rect key="frame" x="71.666666666666671" y="435.66666666666669" width="249.66666666666663" height="34.333333333333314"/>
+                                <rect key="frame" x="71.666666666666686" y="435.66666666666669" width="249.66666666666663" height="34.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nB-BE-7pL">
                                         <rect key="frame" x="0.0" y="8.3333333333333144" width="161" height="18"/>
@@ -105,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2q-Cy-jfb" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990.76923076923072" y="-2.1327014218009479"/>
+            <point key="canvasLocation" x="989" y="-138"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="HVK-O9-DnD">
@@ -187,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdn-15-wRB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1748" y="-2"/>
+            <point key="canvasLocation" x="1746" y="-137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cM8-hd-Dsf">
@@ -205,7 +205,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTz-EB-Cx0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="-2"/>
+            <point key="canvasLocation" x="253" y="-137"/>
         </scene>
         <!--Spells-->
         <scene sceneID="wSu-MW-tuQ">
@@ -232,7 +232,6 @@
         <!--Spells-->
         <scene sceneID="aNX-tR-guy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="smz-hU-nnK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XAg-1l-Fig" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Spells" image="list.bullet" catalog="system" id="2pK-ki-xDt"/>
                     <toolbarItems/>
@@ -245,6 +244,7 @@
                         <segue destination="mBd-b5-Qfn" kind="relationship" relationship="rootViewController" id="RMO-ZE-VXT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smz-hU-nnK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="990" y="667"/>
         </scene>
@@ -254,6 +254,7 @@
                 <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="bTD-cL-ERS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QAb-eD-Scc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -270,17 +271,70 @@
         <scene sceneID="q1T-Ar-2bG">
             <objects>
                 <viewController id="zor-6N-L7t" customClass="SpellbookListViewController" customModule="DNDSpellbook" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uJm-kV-kqL" customClass="SpellbookView">
+                    <view key="view" contentMode="scaleToFill" id="uJm-kV-kqL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pL8-O5-7jy">
+                                <rect key="frame" x="16" y="119" width="361" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpellbookCell" rowHeight="110" id="afL-hZ-04W" userLabel="Spellbook Cell" customClass="SpellbookCell" customModule="DNDSpellbook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="afL-hZ-04W" id="RXt-cM-88Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xol-ey-9pp" userLabel="Spellbook Name">
+                                                    <rect key="frame" x="20" y="11" width="321" height="88"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xol-ey-9pp" firstAttribute="leading" secondItem="RXt-cM-88Y" secondAttribute="leadingMargin" id="WOl-FD-fdJ"/>
+                                                <constraint firstItem="Xol-ey-9pp" firstAttribute="top" secondItem="RXt-cM-88Y" secondAttribute="topMargin" id="o7f-CD-u7f"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Xol-ey-9pp" secondAttribute="bottom" id="qPl-RH-t0W"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Xol-ey-9pp" secondAttribute="trailing" id="uPe-dt-5qQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="spellbookName" destination="Xol-ey-9pp" id="lIs-dM-OGk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2xd-vU-VuH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pL8-O5-7jy" firstAttribute="leading" secondItem="2xd-vU-VuH" secondAttribute="leading" constant="16" id="GyF-Ag-zXD"/>
+                            <constraint firstItem="pL8-O5-7jy" firstAttribute="top" secondItem="2xd-vU-VuH" secondAttribute="top" constant="16" id="WtW-Gz-s6v"/>
+                            <constraint firstAttribute="bottom" secondItem="pL8-O5-7jy" secondAttribute="bottom" constant="16" id="ctY-ka-QTt"/>
+                            <constraint firstItem="2xd-vU-VuH" firstAttribute="trailing" secondItem="pL8-O5-7jy" secondAttribute="trailing" constant="16" id="uOY-F7-ZZL"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Spellbooks" id="XLl-Wr-Wpy"/>
+                    <navigationItem key="navigationItem" title="Spellbooks" id="XLl-Wr-Wpy">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="mzn-AX-AUh" userLabel="Logout Button">
+                            <connections>
+                                <action selector="didTapLogoutButton:" destination="zor-6N-L7t" id="ZYC-06-wlC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="HgO-qm-a5c" userLabel="Create Spellbook Button">
+                            <connections>
+                                <action selector="didTapCreateSpellbookButton:" destination="zor-6N-L7t" id="Kwa-cw-eL2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="pL8-O5-7jy" id="c0G-5M-7pu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DDB-zE-7Q0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1179" y="1385"/>
+            <point key="canvasLocation" x="1722.9007633587785" y="1402.8169014084508"/>
         </scene>
         <!--Spellbooks-->
         <scene sceneID="89t-fG-ccC">
@@ -299,12 +353,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEY-HF-Zbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="1385"/>
+            <point key="canvasLocation" x="989" y="1403"/>
         </scene>
     </scenes>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

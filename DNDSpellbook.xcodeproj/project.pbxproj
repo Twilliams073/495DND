@@ -16,14 +16,13 @@
 		48AB3FDD29F8A54200049CDA /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 48AB3FDC29F8A54200049CDA /* ParseSwift */; };
 		48AB3FE529F8A6C300049CDA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FE429F8A6C300049CDA /* User.swift */; };
 		48AB3FE729F8A6D900049CDA /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FE629F8A6D900049CDA /* Spell.swift */; };
-		48AB3FE929F8A6E400049CDA /* Spellbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FE829F8A6E400049CDA /* Spellbook.swift */; };
+		48AB3FE929F8A6E400049CDA /* Spellbooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FE829F8A6E400049CDA /* Spellbooks.swift */; };
 		48AB3FEF29F8A8F300049CDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FEE29F8A8F300049CDA /* LoginViewController.swift */; };
 		48AB3FF129F8A91300049CDA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FF029F8A91300049CDA /* SignUpViewController.swift */; };
 		48AB3FF729FA00C300049CDA /* SpellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FF629FA00C300049CDA /* SpellCell.swift */; };
 		48AB3FF929FA014E00049CDA /* SpellListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FF829FA014E00049CDA /* SpellListViewController.swift */; };
 		48AB3FFB29FA036B00049CDA /* SpellbookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FFA29FA036B00049CDA /* SpellbookListViewController.swift */; };
-		48AB3FFD29FA03EE00049CDA /* SpellbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FFC29FA03EE00049CDA /* SpellbookViewController.swift */; };
-		48AB3FFF29FA03FF00049CDA /* SpellbookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FFE29FA03FF00049CDA /* SpellbookCell.swift */; };
+		48F5D3C72A04A849001DA82C /* SpellbookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F5D3C62A04A849001DA82C /* SpellbookCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,14 +36,13 @@
 		48AB3FD929F8A03A00049CDA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		48AB3FE429F8A6C300049CDA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		48AB3FE629F8A6D900049CDA /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
-		48AB3FE829F8A6E400049CDA /* Spellbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spellbook.swift; sourceTree = "<group>"; };
+		48AB3FE829F8A6E400049CDA /* Spellbooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spellbooks.swift; sourceTree = "<group>"; };
 		48AB3FEE29F8A8F300049CDA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		48AB3FF029F8A91300049CDA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		48AB3FF629FA00C300049CDA /* SpellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCell.swift; sourceTree = "<group>"; };
 		48AB3FF829FA014E00049CDA /* SpellListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListViewController.swift; sourceTree = "<group>"; };
 		48AB3FFA29FA036B00049CDA /* SpellbookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellbookListViewController.swift; sourceTree = "<group>"; };
-		48AB3FFC29FA03EE00049CDA /* SpellbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellbookViewController.swift; sourceTree = "<group>"; };
-		48AB3FFE29FA03FF00049CDA /* SpellbookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellbookCell.swift; sourceTree = "<group>"; };
+		48F5D3C62A04A849001DA82C /* SpellbookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpellbookCell.swift; path = ../SpellList/SpellbookCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +80,9 @@
 				48AB3FF329FA004F00049CDA /* Spellbooks */,
 				48AB3FF229FA004500049CDA /* SpellList */,
 				48AB3FE329F8A69F00049CDA /* Models */,
-				48AB3FC529F8A03300049CDA /* AppDelegate.swift */,
 				48AB3FDE29F8A66F00049CDA /* Login */,
 				48AB3FC729F8A03300049CDA /* SceneDelegate.swift */,
+				48AB3FC529F8A03300049CDA /* AppDelegate.swift */,
 				48AB3FCB29F8A03300049CDA /* Main.storyboard */,
 				48AB3FCE29F8A03400049CDA /* Assets.xcassets */,
 				48AB3FD029F8A03400049CDA /* LaunchScreen.storyboard */,
@@ -107,7 +105,7 @@
 			children = (
 				48AB3FE429F8A6C300049CDA /* User.swift */,
 				48AB3FE629F8A6D900049CDA /* Spell.swift */,
-				48AB3FE829F8A6E400049CDA /* Spellbook.swift */,
+				48AB3FE829F8A6E400049CDA /* Spellbooks.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,8 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				48AB3FFA29FA036B00049CDA /* SpellbookListViewController.swift */,
-				48AB3FFC29FA03EE00049CDA /* SpellbookViewController.swift */,
-				48AB3FFE29FA03FF00049CDA /* SpellbookCell.swift */,
+				48F5D3C62A04A849001DA82C /* SpellbookCell.swift */,
 			);
 			path = Spellbooks;
 			sourceTree = "<group>";
@@ -214,12 +211,11 @@
 				48AB3FFB29FA036B00049CDA /* SpellbookListViewController.swift in Sources */,
 				48AB3FF129F8A91300049CDA /* SignUpViewController.swift in Sources */,
 				48AB3FE729F8A6D900049CDA /* Spell.swift in Sources */,
-				48AB3FFF29FA03FF00049CDA /* SpellbookCell.swift in Sources */,
-				48AB3FFD29FA03EE00049CDA /* SpellbookViewController.swift in Sources */,
+				48F5D3C72A04A849001DA82C /* SpellbookCell.swift in Sources */,
 				48AB3FE529F8A6C300049CDA /* User.swift in Sources */,
 				48AB3FC629F8A03300049CDA /* AppDelegate.swift in Sources */,
 				48AB3FF729FA00C300049CDA /* SpellCell.swift in Sources */,
-				48AB3FE929F8A6E400049CDA /* Spellbook.swift in Sources */,
+				48AB3FE929F8A6E400049CDA /* Spellbooks.swift in Sources */,
 				48AB3FC829F8A03300049CDA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
