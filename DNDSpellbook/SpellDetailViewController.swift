@@ -8,22 +8,17 @@
 import UIKit
 
 class SpellDetailViewController: UIViewController {
+    
+    var spell: Spell!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Gets index to use for spell url from ClassSpellViewController
+        // ex) "https://www.dnd5eapi.co/api/spells/(index)"
+        print(spell.index)
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

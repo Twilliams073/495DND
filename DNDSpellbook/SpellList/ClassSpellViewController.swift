@@ -55,7 +55,7 @@ class ClassSpellViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if spells.count == 0{
-                var emptyLabel = UILabel(frame: CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height))
+                let emptyLabel = UILabel(frame: CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height))
                 emptyLabel.text = "No available spells"
                 emptyLabel.textAlignment = NSTextAlignment.center
                 self.tableView.backgroundView = emptyLabel
@@ -71,6 +71,19 @@ class ClassSpellViewController: UIViewController, UITableViewDataSource {
         let spell = spells[indexPath.row]
         cell.configure(with: spell)
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell,
+
+            let indexPath = tableView.indexPath(for: cell),
+
+            let spellDetailViewController = segue.destination as? SpellDetailViewController {
+
+            let spell = spells[indexPath.row]
+            spellDetailViewController.spell = spell
+
+        }
     }
     
     
