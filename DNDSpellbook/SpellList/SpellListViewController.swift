@@ -74,19 +74,18 @@ class SpellListViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let cell = sender as? UITableViewCell,
-//
-//           let indexPath = classTableView.indexPath(for: cell),
-//
-//           let classSpellViewController = segue.destination as? ClassSpellViewController {
-//
-//            /* TRYING TO THINK OF WHAT TO PUT HERE FOR CLASSSPELLViEWCONTROLLER
-//            let  = data[indexPath.row]
-//
-//            */
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell,
+
+            let indexPath = classTableView.indexPath(for: cell),
+
+            let classSpellViewController = segue.destination as? ClassSpellViewController {
+
+            let className = data[indexPath.row].index
+            classSpellViewController.className = className
+
+        }
+    }
 
 }
 

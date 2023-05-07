@@ -11,8 +11,7 @@ import ParseSwift
 struct Spell: Decodable {
     let index: String
     let name: String
-    let desc: [String]
-    let range: String
+    let url: String
 }
 
 struct SpellResponse : Decodable {

@@ -10,20 +10,60 @@ import UIKit
 class ClassSpellViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    /* STUCK */
-    // var
+    
+    var className: String = ""
     var spells: [Spell] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // tableView.dataSource = self
+        let url = URL(string: "https://www.dnd5eapi.co/api/classes/"+className+"/spells")!
+        let request = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+            if let error = error {
+                print("❌ Network error: \(error.localizedDescription)")
+            }
+
+            guard let data = data else {
+                print("❌ Data is nil")
+                return
+            }
+
+            do {
+                let decoder = JSONDecoder()
+
+                let response = try decoder.decode(SpellResponse.self, from: data)
+
+                let spells = response.results
+
+                DispatchQueue.main.async {
+
+                    self?.spells = spells
+
+                    self?.tableView.reloadData()
+                }
+
+
+            } catch {
+                print("❌ Error parsing JSON: \(error.localizedDescription)")
+            }
+        }
         
-//        let url = URL(string: )
+        task.resume()
+        tableView.dataSource = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return spells.count
+        if spells.count == 0{
+                var emptyLabel = UILabel(frame: CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height))
+                emptyLabel.text = "No available spells"
+                emptyLabel.textAlignment = NSTextAlignment.center
+                self.tableView.backgroundView = emptyLabel
+                self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+                return 0
+            } else {
+                return spells.count
+            }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
