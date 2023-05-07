@@ -7,8 +7,34 @@
 
 import UIKit
 
-class SpellListViewController: UIViewController {
+class SpellListViewController: UIViewController, UITableViewDataSource {
     
+    
+    @IBOutlet weak var classTableView: UITableView!
+    
+    struct Class {
+        let index: String
+        let title: String
+        let imageName: String
+    }
+    
+//    var classes = ["barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard"]
+    
+    let data: [Class] = [
+        Class(index: "barbarian", title: "Barbarian", imageName: "Barbarian"),
+        Class(index: "bard", title: "Bard", imageName: "Bard"),
+        Class(index: "cleric", title: "Cleric", imageName: "Cleric"),
+        Class(index: "druid", title: "Druid", imageName: "Druid"),
+        Class(index: "fighter", title: "Fighter", imageName: "Fighter"),
+        Class(index: "monk", title: "Monk", imageName: "Monk"),
+        Class(index: "paladin", title: "Paladin", imageName: "Paladin"),
+        Class(index: "ranger", title: "Ranger", imageName: "Ranger"),
+        Class(index: "rogue", title: "Rogue", imageName: "Rogue"),
+        Class(index: "sorcerer", title: "Sorcerer", imageName: "Sorcerer"),
+        Class(index: "warlock", title: "Warlock", imageName: "Warlock"),
+        Class(index: "wizard", title: "Wizard", imageName: "Wizard"),
+        
+    ]
     
     @IBAction func didTapLogout(_ sender: Any) {
         User.logout() { [weak self] result in
@@ -33,18 +59,34 @@ class SpellListViewController: UIViewController {
         super.viewDidLoad()
         print("SpellListViewController did load...")
 
-        // Do any additional setup after loading the view.
+        classTableView.dataSource = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let className = data[indexPath.row]
+        let cell = classTableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath) as! ClassCell
+        cell.label.text = className.title
+        cell.iconImageView.image = UIImage(named: className.imageName)
+        return cell
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let cell = sender as? UITableViewCell,
+//
+//           let indexPath = classTableView.indexPath(for: cell),
+//
+//           let classSpellViewController = segue.destination as? ClassSpellViewController {
+//
+//            /* TRYING TO THINK OF WHAT TO PUT HERE FOR CLASSSPELLViEWCONTROLLER
+//            let  = data[indexPath.row]
+//
+//            */
+//        }
+//    }
 
 }
+

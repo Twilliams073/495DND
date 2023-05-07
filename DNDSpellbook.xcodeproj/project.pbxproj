@@ -24,6 +24,10 @@
 		48AB3FF929FA014E00049CDA /* SpellListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FF829FA014E00049CDA /* SpellListViewController.swift */; };
 		48AB3FFB29FA036B00049CDA /* SpellbookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FFA29FA036B00049CDA /* SpellbookListViewController.swift */; };
 		48F5D3C72A04A849001DA82C /* SpellbookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F5D3C62A04A849001DA82C /* SpellbookCell.swift */; };
+		48AB3FFD29FA03EE00049CDA /* SpellbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FFC29FA03EE00049CDA /* SpellbookViewController.swift */; };
+		48AB3FFF29FA03FF00049CDA /* SpellbookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FFE29FA03FF00049CDA /* SpellbookCell.swift */; };
+		EABB03702A06D64200F765BC /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABB036F2A06D64200F765BC /* ClassCell.swift */; };
+		EABB03722A06DCA700F765BC /* ClassSpellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABB03712A06DCA700F765BC /* ClassSpellViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		48AB3FF829FA014E00049CDA /* SpellListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListViewController.swift; sourceTree = "<group>"; };
 		48AB3FFA29FA036B00049CDA /* SpellbookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellbookListViewController.swift; sourceTree = "<group>"; };
 		48F5D3C62A04A849001DA82C /* SpellbookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpellbookCell.swift; path = ../SpellList/SpellbookCell.swift; sourceTree = "<group>"; };
+		48AB3FFC29FA03EE00049CDA /* SpellbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellbookViewController.swift; sourceTree = "<group>"; };
+		48AB3FFE29FA03FF00049CDA /* SpellbookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellbookCell.swift; sourceTree = "<group>"; };
+		EABB036F2A06D64200F765BC /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
+		EABB03712A06DCA700F765BC /* ClassSpellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSpellViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +124,10 @@
 		48AB3FF229FA004500049CDA /* SpellList */ = {
 			isa = PBXGroup;
 			children = (
-				48AB3FF629FA00C300049CDA /* SpellCell.swift */,
 				48AB3FF829FA014E00049CDA /* SpellListViewController.swift */,
+				EABB036F2A06D64200F765BC /* ClassCell.swift */,
+				EABB03712A06DCA700F765BC /* ClassSpellViewController.swift */,
+				48AB3FF629FA00C300049CDA /* SpellCell.swift */,
 			);
 			path = SpellList;
 			sourceTree = "<group>";
@@ -210,9 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABB03702A06D64200F765BC /* ClassCell.swift in Sources */,
 				48AB3FEF29F8A8F300049CDA /* LoginViewController.swift in Sources */,
 				48AB3FF929FA014E00049CDA /* SpellListViewController.swift in Sources */,
 				48AB3FFB29FA036B00049CDA /* SpellbookListViewController.swift in Sources */,
+				EABB03722A06DCA700F765BC /* ClassSpellViewController.swift in Sources */,
 				48AB3FF129F8A91300049CDA /* SignUpViewController.swift in Sources */,
 				48AB3FE729F8A6D900049CDA /* Spell.swift in Sources */,
 				48F5D3C72A04A849001DA82C /* SpellbookCell.swift in Sources */,
