@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4870DE4A2A07224B004D950E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4870DE492A07224B004D950E /* .gitignore */; };
 		48AB3FC629F8A03300049CDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FC529F8A03300049CDA /* AppDelegate.swift */; };
 		48AB3FC829F8A03300049CDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FC729F8A03300049CDA /* SceneDelegate.swift */; };
 		48AB3FCD29F8A03300049CDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48AB3FCB29F8A03300049CDA /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4870DE492A07224B004D950E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = DNDSpellbook/.gitignore; sourceTree = SOURCE_ROOT; };
 		48AB3FC229F8A03300049CDA /* DNDSpellbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNDSpellbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48AB3FC529F8A03300049CDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48AB3FC729F8A03300049CDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		48AB3FC429F8A03300049CDA /* DNDSpellbook */ = {
 			isa = PBXGroup;
 			children = (
+				4870DE492A07224B004D950E /* .gitignore */,
 				48AB3FF329FA004F00049CDA /* Spellbooks */,
 				48AB3FF229FA004500049CDA /* SpellList */,
 				48AB3FE329F8A69F00049CDA /* Models */,
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4870DE4A2A07224B004D950E /* .gitignore in Resources */,
 				48AB3FD229F8A03400049CDA /* LaunchScreen.storyboard in Resources */,
 				48AB3FCF29F8A03400049CDA /* Assets.xcassets in Resources */,
 				48AB3FDA29F8A03A00049CDA /* README.md in Resources */,
