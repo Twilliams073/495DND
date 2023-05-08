@@ -38,7 +38,7 @@ class SpellDetailViewController: UIViewController {
     }
     
     @IBAction func removeFromSpellbook(_ sender: Any) {
-        
+
         let spls = self.spellBook?.spells
         let addr = "," + (self.spellDetailed?.index)!
         let upd = (spls!).replacingOccurrences(of: addr , with: "")

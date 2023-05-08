@@ -25,11 +25,6 @@ class SpellbookSpellsViewController: UIViewController, UITableViewDataSource {
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         let saveAction = UIAlertAction(title: "Delete", style: .default) { _ in
-//            do {
-//                try self.spellbook?.delete()
-//            } catch (let error) {
-//                print("❌ Error: \(error.localizedDescription)")
-//            }
             
             self.spellbook?.delete { result in
                 switch result {
@@ -82,6 +77,68 @@ class SpellbookSpellsViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         tableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("View appeared...")
+        let query = Spellbooks.query()
+            .where("username" == User.current?.username, "name" == spellbook?.name)
+        
+        query.find { result in
+            switch result {
+            case .success(let spellbooks):
+                print("✅ Query successful: \(spellbooks[0].spells)")
+                let spellIndexes = spellbooks[0].spells?.components(separatedBy: ",")
+                print("spellIndexes = \(spellIndexes)")
+                for (i, spell) in self.spells.enumerated() {
+                    if(!(spellIndexes?.contains(spell.index) ?? false)) {
+                        print("Found spell mismatch at i = \(i) -> \(spell)")
+                        self.spells.remove(at: i)                    }
+                }
+            case .failure(let error):
+                print("❌ Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    private func syncSpells() {
+        let query = Spellbooks.query()
+            .where("username" == User.current?.username, "name" == spellbook?.name)
+        
+        query.find { result in
+            switch result {
+            case .success(let spellbooks):
+                let spellIndexes: [String] = self.spellbook?.spells?.components(separatedBy: ",") ?? ["undefined"]
+                for (i, spell) in self.spells.enumerated() {
+                    if(!spellIndexes.contains(spell.index)) {
+                        self.spells.remove(at: i)
+                        print("Removing spell: \(spell)")
+                    }
+                }
+               print("✅ Query successful: \(spellbooks)")
+            case .failure(let error):
+                print("❌ Error: \(error.localizedDescription)")
+            }
+        }
+        
+//        let url = URL(string: "https://www.dnd5eapi.co/api/spells/")!
+//        let request = URLRequest(url: url)
+//        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+//            if let error = error {
+//                print("❌ Network error: \(error.localizedDescription)")
+//            }
+//
+//            guard let data = data else {
+//                print("❌ Data is nil")
+//                return
+//            }
+//
+//            do {
+//
+//            } catch {
+//                print("❌ Error: \(error.localizedDescription)")
+//            }
+//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
