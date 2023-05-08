@@ -31,5 +31,5 @@ struct SpellDetail: Decodable {
 }
 
 struct SpellDetailResponse: Decodable {
-    let result: [SpellDetail]
+    let result: SpellDetail
 }
