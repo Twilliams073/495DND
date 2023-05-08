@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4870DE4A2A07224B004D950E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4870DE492A07224B004D950E /* .gitignore */; };
+		488CCAFA2A083FB400F8382F /* SpellbookSpellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488CCAF92A083FB400F8382F /* SpellbookSpellsViewController.swift */; };
 		48AB3FC629F8A03300049CDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FC529F8A03300049CDA /* AppDelegate.swift */; };
 		48AB3FC829F8A03300049CDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB3FC729F8A03300049CDA /* SceneDelegate.swift */; };
 		48AB3FCD29F8A03300049CDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48AB3FCB29F8A03300049CDA /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		4870DE492A07224B004D950E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = DNDSpellbook/.gitignore; sourceTree = SOURCE_ROOT; };
+		488CCAF92A083FB400F8382F /* SpellbookSpellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellbookSpellsViewController.swift; sourceTree = "<group>"; };
 		48AB3FC229F8A03300049CDA /* DNDSpellbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNDSpellbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48AB3FC529F8A03300049CDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48AB3FC729F8A03300049CDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				48AB3FFA29FA036B00049CDA /* SpellbookListViewController.swift */,
 				48F5D3C62A04A849001DA82C /* SpellbookCell.swift */,
+				488CCAF92A083FB400F8382F /* SpellbookSpellsViewController.swift */,
 			);
 			path = Spellbooks;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				EABB03722A06DCA700F765BC /* ClassSpellViewController.swift in Sources */,
 				48AB3FF129F8A91300049CDA /* SignUpViewController.swift in Sources */,
 				48AB3FE729F8A6D900049CDA /* Spell.swift in Sources */,
+				488CCAFA2A083FB400F8382F /* SpellbookSpellsViewController.swift in Sources */,
 				48F5D3C72A04A849001DA82C /* SpellbookCell.swift in Sources */,
 				48AB3FE529F8A6C300049CDA /* User.swift in Sources */,
 				48AB3FC629F8A03300049CDA /* AppDelegate.swift in Sources */,

@@ -94,17 +94,16 @@ class SpellbookListViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         
         tableView.dataSource = self
-        tableView.allowsSelection = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         querySpellbooks()
-        print("Spellbooks count: \(spellbooks.count)")
-        spellbooks.forEach {spellbook in
-            print(spellbook)
-        }
+//        print("Spellbooks count: \(spellbooks.count)")
+//        spellbooks.forEach {spellbook in
+//            print(spellbook)
+//        }
     }
     
     // Fetch all spellbooks belonging to the current User
@@ -124,16 +123,69 @@ class SpellbookListViewController: UIViewController, UITableViewDataSource {
         }
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        if let cell = sender as? UITableViewCell,
 
+            let indexPath = tableView.indexPath(for: cell),
+
+            let destination = segue.destination as? SpellbookSpellsViewController {
+
+            let spellNames = spellbooks[indexPath.row].spells?.components(separatedBy: ",")
+            print(spellNames!)
+            
+            let url = URL(string: "https://www.dnd5eapi.co/api/spells")!
+            let request = URLRequest(url: url)
+            let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+                if let error = error {
+                    print("❌ Network error: \(error.localizedDescription)")
+                }
+
+                guard let data = data else {
+                    print("❌ Data is nil")
+                    return
+                }
+
+                do {
+                    let decoder = JSONDecoder()
+
+                    let response = try decoder.decode(SpellResponse.self, from: data)
+
+                    let results = response.results
+                    var spells: [Spell] = []
+
+                    DispatchQueue.main.async {
+                        results.forEach { spell in
+                            if((spellNames!.contains(spell.index))) {
+                                spells.append(spell)
+                            }
+                        }
+                        destination.spells = spells
+                        destination.spellbook = (self?.spellbooks[indexPath.row])!
+                        destination.title = (self?.spellbooks[indexPath.row].name)!
+                    }
+                    
+
+
+                } catch {
+                    print("❌ Error parsing JSON: \(error.localizedDescription)")
+                }
+            }
+            
+            task.resume()
+            if var currentUser = User.current {
+                currentUser.currentSpellbookName = spellbooks[indexPath.row].name
+                currentUser.save() { [weak self] result in
+                    switch result {
+                    case .success(let user):
+                        print("✅ current spellbook for \(user.username ?? "undefined") is now \(user.currentSpellbookName ?? "undefined")")
+                    case .failure(let error):
+                        self?.showAlert(description: error.localizedDescription)
+                    }
+                }
+                
+            }
+            
+            
+        }
+    }
 }

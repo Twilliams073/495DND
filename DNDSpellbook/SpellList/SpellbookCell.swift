@@ -10,6 +10,7 @@ import UIKit
 class SpellbookCell: UITableViewCell {
 
     @IBOutlet weak var spellbookName: UILabel!
+    @IBOutlet weak var currentSpellbookCheck: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +25,11 @@ class SpellbookCell: UITableViewCell {
     
     func configure(with spellbook: Spellbooks) {
         spellbookName.text = spellbook.name
+        if(User.current?.currentSpellbookName != spellbook.name) {
+            currentSpellbookCheck.isHidden = true
+        } else {
+            currentSpellbookCheck.isHidden = false
+        }
     }
 
 }

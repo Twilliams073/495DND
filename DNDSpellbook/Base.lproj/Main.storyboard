@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U8B-Me-bPa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U8B-Me-bPa">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -343,7 +343,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFq-Ox-1Ky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2507.6335877862593" y="666.90140845070425"/>
+            <point key="canvasLocation" x="2511" y="667"/>
+        </scene>
+        <!--Spellbook Spells View Controller-->
+        <scene sceneID="cUB-9u-NAV">
+            <objects>
+                <viewController id="9gd-Re-5GK" customClass="SpellbookSpellsViewController" customModule="DNDSpellbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6gg-JS-CPX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DnP-DW-wt8">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpellCell" rowHeight="97" id="760-7g-hgd" customClass="SpellCell" customModule="DNDSpellbook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="760-7g-hgd" id="Xvc-Vb-2mD">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spell Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcw-26-MBu">
+                                                    <rect key="frame" x="36" y="27" width="321" height="43"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="27"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lcw-26-MBu" firstAttribute="leading" secondItem="Xvc-Vb-2mD" secondAttribute="leadingMargin" constant="16" id="73S-7J-ipj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lcw-26-MBu" secondAttribute="bottom" constant="16" id="9gL-vK-RRT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lcw-26-MBu" secondAttribute="trailing" constant="16" id="Jel-28-Fjc"/>
+                                                <constraint firstItem="lcw-26-MBu" firstAttribute="top" secondItem="Xvc-Vb-2mD" secondAttribute="topMargin" constant="16" id="sS7-dW-gV3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="spellLabel" destination="lcw-26-MBu" id="ThU-e6-lBl"/>
+                                            <segue destination="1Bd-Bc-hJA" kind="show" id="jIU-Ja-3lP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="urc-P6-ghA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DnP-DW-wt8" firstAttribute="leading" secondItem="urc-P6-ghA" secondAttribute="leading" id="087-xA-Hhx"/>
+                            <constraint firstItem="urc-P6-ghA" firstAttribute="bottom" secondItem="DnP-DW-wt8" secondAttribute="bottom" id="USU-4Z-EUO"/>
+                            <constraint firstItem="DnP-DW-wt8" firstAttribute="top" secondItem="urc-P6-ghA" secondAttribute="top" id="cWH-6G-sv5"/>
+                            <constraint firstItem="urc-P6-ghA" firstAttribute="trailing" secondItem="DnP-DW-wt8" secondAttribute="trailing" id="iWX-UL-ScH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MF4-ps-GbK">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash" catalog="system" id="Xdr-iO-agA" userLabel="Delete Spellbook Button">
+                            <connections>
+                                <action selector="didTapDeleteSpellbookItem:" destination="9gd-Re-5GK" id="dLl-3B-eQ0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navigationBar" destination="MF4-ps-GbK" id="f5F-Tm-1Jz"/>
+                        <outlet property="tableView" destination="DnP-DW-wt8" id="hkV-Od-h7v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a6y-g4-lqI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2511" y="1403"/>
         </scene>
         <!--Spell Detail View Controller-->
         <scene sceneID="i0I-1B-aEs">
@@ -359,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9C-cF-SCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3719" y="1052"/>
+            <point key="canvasLocation" x="3760" y="1030"/>
         </scene>
         <!--Spells-->
         <scene sceneID="aNX-tR-guy">
@@ -402,7 +468,7 @@
         <!--Spellbooks-->
         <scene sceneID="q1T-Ar-2bG">
             <objects>
-                <viewController id="zor-6N-L7t" customClass="SpellbookListViewController" customModule="DNDSpellbook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpellbooksListController" id="zor-6N-L7t" customClass="SpellbookListViewController" customModule="DNDSpellbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uJm-kV-kqL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -418,22 +484,36 @@
                                             <rect key="frame" x="0.0" y="0.0" width="361" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xol-ey-9pp" userLabel="Spellbook Name">
-                                                    <rect key="frame" x="20" y="11" width="321" height="88"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="uqH-QI-Oxb">
+                                                    <rect key="frame" x="0.0" y="16" width="361" height="78"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yqm-IE-m9i" userLabel="Current Spellbook Check">
+                                                            <rect key="frame" x="0.0" y="4" width="46" height="71"/>
+                                                            <imageReference key="image" image="checkmark" catalog="system" symbolScale="small"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xol-ey-9pp" userLabel="Spellbook Name">
+                                                            <rect key="frame" x="70" y="0.0" width="291" height="78"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Xol-ey-9pp" firstAttribute="leading" secondItem="RXt-cM-88Y" secondAttribute="leadingMargin" id="WOl-FD-fdJ"/>
-                                                <constraint firstItem="Xol-ey-9pp" firstAttribute="top" secondItem="RXt-cM-88Y" secondAttribute="topMargin" id="o7f-CD-u7f"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Xol-ey-9pp" secondAttribute="bottom" id="qPl-RH-t0W"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Xol-ey-9pp" secondAttribute="trailing" id="uPe-dt-5qQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="uqH-QI-Oxb" secondAttribute="trailing" id="9jo-sZ-N1d"/>
+                                                <constraint firstAttribute="trailing" secondItem="uqH-QI-Oxb" secondAttribute="trailing" id="BPW-Yu-ozv"/>
+                                                <constraint firstItem="uqH-QI-Oxb" firstAttribute="top" secondItem="RXt-cM-88Y" secondAttribute="top" constant="16" id="GUT-Le-3tJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="uqH-QI-Oxb" secondAttribute="bottom" constant="16" id="ajM-fH-SnP"/>
+                                                <constraint firstItem="uqH-QI-Oxb" firstAttribute="leading" secondItem="RXt-cM-88Y" secondAttribute="leading" id="bEE-pv-Yr8"/>
+                                                <constraint firstItem="uqH-QI-Oxb" firstAttribute="leading" secondItem="RXt-cM-88Y" secondAttribute="leading" id="dlY-cK-fKh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="currentSpellbookCheck" destination="yqm-IE-m9i" id="Ave-Ob-NNo"/>
                                             <outlet property="spellbookName" destination="Xol-ey-9pp" id="lIs-dM-OGk"/>
+                                            <segue destination="9gd-Re-5GK" kind="show" id="xBN-pd-tu8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -488,10 +568,15 @@
             <point key="canvasLocation" x="989" y="1403"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jIU-Ja-3lP"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

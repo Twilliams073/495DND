@@ -24,7 +24,7 @@ struct User: ParseUser {
     var authData: [String: [String: String]?]?
     
     // Custom User properties
-    var currentSpellbookName: String?
+    var currentSpellbookName: String? // if the variable is empty, "", or undefined then there is no current spellbook chosen
 }
 
 extension User {
