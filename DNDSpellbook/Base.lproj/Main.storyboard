@@ -525,14 +525,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Kb-fi-uY3">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="7ZQ-Ss-MAR">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1LV-6C-XNm">
-                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Minus" image="minus" catalog="system" id="BM7-B7-TyD">
+                                <connections>
+                                    <action selector="removeFromSpellbook:" destination="1Bd-Bc-hJA" id="Go5-VO-1ga"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Plus" image="plus" catalog="system" id="1VC-4h-FcU">
+                                <connections>
+                                    <action selector="addToSpellbook:" destination="1Bd-Bc-hJA" id="t86-Bf-XHW"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="spellCT" destination="2Rt-6i-i8h" id="RT1-Gh-Uh4"/>
@@ -695,6 +699,7 @@
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <image name="minus" catalog="system" width="128" height="26"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="labelColor">
