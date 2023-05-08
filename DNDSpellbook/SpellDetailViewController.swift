@@ -6,11 +6,18 @@
 //
 
 import UIKit
+import ParseSwift
 
 class SpellDetailViewController: UIViewController {
     
     @IBOutlet weak var spellLabel: UILabel!
-    @IBOutlet weak var spellDesc: UILabel!
+    @IBOutlet weak var spellDesc: UITextView!
+    @IBOutlet weak var spellRange: UILabel!
+    @IBOutlet weak var spellDuration: UILabel!
+    @IBOutlet weak var spellLevel: UILabel!
+    @IBOutlet weak var spellCT: UILabel!
+    
+    
     
     var spell: Spell!
     var spellDetailed: SpellDetail?
@@ -34,15 +41,22 @@ class SpellDetailViewController: UIViewController {
             do {
                 let decoder = JSONDecoder()
 
-                let response = try decoder.decode(SpellDetailResponse.self, from: data)
+                let response = try decoder.decode(SpellDetail.self, from: data)
 
-                let spellDetailed = response.result
+                let spellDetailed = response
+                print(spellDetailed)
 
                 DispatchQueue.main.async {
 
                     self?.spellDetailed = spellDetailed
+                    self?.spellLabel.text = spellDetailed.name
+                    self?.spellDesc.text = spellDetailed.desc[0]
+                    self?.spellRange.text = spellDetailed.range
+                    self?.spellDuration.text = spellDetailed.duration
+                    self?.spellLevel.text = String(spellDetailed.level)
+                    self?.spellCT.text = spellDetailed.casting_time
                 }
-
+                
 
             } catch {
                 debugPrint(error)
@@ -54,8 +68,9 @@ class SpellDetailViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
+        //spellLabel.text = spellDetailed?.name
+        //spellDesc.text = spellDetailed?.desc[0]
         
-        spellLabel.text = spellDetailed?.name
-        spellDesc.text = spellDetailed?.desc[0]
     }
+        
 }
